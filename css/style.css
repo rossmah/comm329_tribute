@@ -1,0 +1,31 @@
+/*-- Main Menu Styles--*/
+nav ul {
+    list-style: none;
+    padding: 1em;
+    /*display: flex;
+    /*justify-content: space-evenly; /*space-between;*/
+    
+    width: 100%;
+    margin: 0px;
+  }
+li{ 
+    display: inline-block;
+    padding: 1em 2em 2em 1em;
+    float: right;
+    
+}
+li:first-child{
+    float:left;
+}
+
+  nav a:link, nav a:visited {
+    color: #FBF0D9;
+    text-decoration: none;
+  }
+  nav a:hover, nav a:active  {
+    color: #F0F0F0;
+    text-decoration: underline;
+  }
+  nav a.active {
+    color: #F0F0F0;
+  }
