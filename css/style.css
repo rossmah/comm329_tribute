@@ -1,4 +1,8 @@
 /*-- Main Menu Styles--*/
+
+html{
+  width: 100%;
+}
 nav ul {
     list-style: none;
     /*padding: 1em;
@@ -21,7 +25,8 @@ li:first-child{
 nav {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 2em;
-  
+  position: relative;
+  z-index: 100;
   
 }
 
@@ -43,11 +48,15 @@ nav {
     height: 700px;
     background: url(../img/sword_header.jpg);
     background-size: cover;
+    /*position: absolute;*/
   }
 
 
   .button-container{
     padding-bottom: 100px;
+    padding-top: 0px;
+    margin: 0px;
+    
   }
 
 
@@ -61,9 +70,10 @@ nav {
 
 /* Style the button and place it in the middle of the container/image */
 .btn {
-  position: relative;
-  top: 25%;
-  left: 60%;
+  position: absolute;
+  /*top: 50%;
+  left: 70%;*/
+  
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%); /**/
   font-family: 'Josefin Sans', sans-serif;
@@ -104,23 +114,87 @@ body {
   padding: 0;
   }
 
+/* character grid */
+.grid-item{ 
+  background: lightsalmon;
+border: 2px solid black;
+padding: 1.5rem;
+}
+.grid-container{
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+  "one two three"
+  "four five six"
+  "seven eight nine"
+  "ten eleven twelve";
+}
+
+.grid-container > p:nth-child(1) {
+  grid-area: one;
+}
+.grid-container > p:nth-child(2) {
+  grid-area: two;
+}
+.grid-container > p:nth-child(3) {
+  grid-area: three;
+}
+.grid-container > p:nth-child(4) {
+  grid-area: four;
+}
+.grid-container > p:nth-child(5) {
+  grid-area: five;
+}
+.grid-container > p:nth-child(6) {
+  grid-area: six;
+}
+.grid-container > p:nth-child(7) {
+  grid-area: seven;
+}
+.grid-container > p:nth-child(8) {
+  grid-area: eight;
+}
+.grid-container > p:nth-child(9) {
+  grid-area: nine;
+}
+.grid-container > p:nth-child(10) {
+  grid-area: ten;
+}
+.grid-container > p:nth-child(11) {
+  grid-area: eleven;
+}
+.grid-container > p:nth-child(12) {
+  grid-area: twelve;
+
   /*-- Media Queries --*/
 @media screen and (min-width: 550px) {
-  .title_descript{width: 5rem;}
+  .title_descript{
+    width: 5rem;
+  }
 }
 @media screen and (min-width: 768px) {
-  .title_descript{width: 10rem;}
+  .title_descript{
+    width: 10rem;
+  }
 }
 @media screen and (min-width: 990px) {
   .title_descript{width: 20rem;
-    font-size: 2rem;}
-}
-@media screen and (min-width: 1280px) {
-  .title_descript{width: 30%;
     font-size: 2rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .title_descript{
+    width: 40%;
+    font-size: 1.8rem;
+    line-height: 2rem;
+  }
+}
 @media screen and (min-width: 1440px) {
-  .title_descript{width: 40%;
-    font-size: 2rem;}
+  .title_descript{
+    width: 40%;
+    font-size: 2rem;
+    line-height: 3.5rem;
+  }
 }
