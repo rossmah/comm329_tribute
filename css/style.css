@@ -71,8 +71,8 @@ nav {
 /* Style the button and place it in the middle of the container/image */
 .btn {
   position: absolute;
-  /*top: 50%;
-  left: 70%;*/
+  top: 70%;
+  left: 60%;
   
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%); /**/
@@ -86,7 +86,6 @@ nav {
   text-transform: uppercase;
   font-size: 1.5em;
   font-weight: 700;
-  overflow:visible;
 }
 .title_descript{
     position: absolute;
@@ -94,14 +93,15 @@ nav {
     padding-left: 1rem;
     padding-right: 1rem;
     margin: 0px;
-    top: 18%;
-    left: 50%;
-    font-size: 3rem;  
-    width: 70%;
+    top: 10rem;
+    left: 40%;
+    font-size: 2.75rem;  
+    width: 55%;
     font-family: 'Oswald', sans-serif;
     line-height: 3.5rem;
     font-weight: 300;
     color: white;
+    overflow: hidden;
     /*background-color: rgba(0, 47, 255, 0.164); */
 
   }
@@ -119,27 +119,36 @@ body {
   background: lightsalmon;
 border: 2px solid black;
 padding: 1.5rem;
+height: 350px;
+background-size:cover;
 }
 .grid-container{
   display: grid;
   grid-gap: 1rem;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-template-areas:
-  "one two three"
-  "four five six"
-  "seven eight nine"
-  "ten eleven twelve";
+  "one two three four"
+  "five six seven eight"
+  "nine ten eleven twelve";
 }
+
 
 .grid-container > p:nth-child(1) {
   grid-area: one;
+  background: url(../img/link1.jpg);
+    background-size: cover;
 }
 .grid-container > p:nth-child(2) {
   grid-area: two;
+  background: url(../img/zelda1.jpg);
+    background-size: cover;
+    background-position-x: -200px;
 }
 .grid-container > p:nth-child(3) {
   grid-area: three;
+   background: url(../img/link.png);
+    background-size: cover;
 }
 .grid-container > p:nth-child(4) {
   grid-area: four;
@@ -167,7 +176,38 @@ padding: 1.5rem;
 }
 .grid-container > p:nth-child(12) {
   grid-area: twelve;
+}
 
+
+
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.grid-item:hover {
+  transition: .5s ease;
+  background-color: #008CBA;
+  opacity: 0.5;
+}
+
+
+
+
+
+
+
+  
   /*-- Media Queries --*/
 @media screen and (min-width: 550px) {
   .title_descript{
