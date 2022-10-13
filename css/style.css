@@ -2,6 +2,7 @@
 
 html{
   width: 100%;
+  background-color: #d6c693;
 }
 nav ul {
     list-style: none;
@@ -71,9 +72,8 @@ nav {
 /* Style the button and place it in the middle of the container/image */
 .btn {
   position: absolute;
-  top: 70%;
+  top: 55%;
   left: 60%;
-  
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%); /**/
   font-family: 'Josefin Sans', sans-serif;
@@ -105,9 +105,12 @@ nav {
     /*background-color: rgba(0, 47, 255, 0.164); */
 
   }
+
+  /*
 .container .btn:hover {
   background-color: black;
 }
+*/
 
 body {
   margin: 0;
@@ -117,14 +120,21 @@ body {
 /* character grid */
 .grid-item{ 
   background: lightsalmon;
-border: 2px solid black;
-padding: 1.5rem;
-height: 350px;
-background-size:cover;
+  /*border: 2px solid black;*/
+  padding: 0;/*1.5rem;*/
+  margin: 0;
+  height: 350px;
+  max-height: 100em;
+  background-size:cover;
+  backface-visibility: hidden;
+  border-radius: 65px;
 }
 .grid-container{
+  padding: 1rem 1rem 1rem 0rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   display: grid;
-  grid-gap: 1rem;
+  grid-gap: 2rem;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-template-areas:
@@ -136,19 +146,15 @@ background-size:cover;
 
 .grid-container > p:nth-child(1) {
   grid-area: one;
-  background: url(../img/link1.jpg);
-    background-size: cover;
 }
 .grid-container > p:nth-child(2) {
   grid-area: two;
-  background: url(../img/zelda1.jpg);
+  /*background: url(../img/zelda1.jpg);
     background-size: cover;
-    background-position-x: -200px;
+    background-position-x: -200px;*/
 }
 .grid-container > p:nth-child(3) {
   grid-area: three;
-   background: url(../img/link.png);
-    background-size: cover;
 }
 .grid-container > p:nth-child(4) {
   grid-area: four;
@@ -178,10 +184,33 @@ background-size:cover;
   grid-area: twelve;
 }
 
+/*
+
+.charBox {
+  transition: .5s ease;
+  opacity: 0;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 20px;
+}
 
 
+.charBox:hover {
+  opacity: 1;
+}
 
-
+.charText {
+  background-color: #04AA6D;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+  z-index: 5px;
+}
+*/
 .overlay {
   position: absolute;
   top: 0;
@@ -192,17 +221,63 @@ background-size:cover;
   width: 100%;
   opacity: 0;
   transition: .5s ease;
-  background-color: #008CBA;
+  background-color: black;
 }
 
 .grid-item:hover {
   transition: .5s ease;
-  background-color: #008CBA;
-  opacity: 0.5;
+  background-color: black;
+  opacity: 0.8;
 }
 
 
 
+
+
+.characterBox {
+  position: relative;
+  overflow: hidden;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.textBox {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  width:100%;
+  padding: 4rem;
+  margin: 0;
+}
+
+.characterBox:hover .image {
+  opacity: 0.3;
+}
+
+.characterBox:hover .textBox {
+  opacity: 1;
+}
+
+.text {
+  background-color: white;
+  opacity: 0.4;
+  color: black;
+  font-size: 1.1rem;
+  padding: 2rem ;
+  border-radius: 20px;
+}
 
 
 
