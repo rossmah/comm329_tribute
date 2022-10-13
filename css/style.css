@@ -4,21 +4,20 @@ html{
   width: 100%;
   background-color: #d6c693;
 }
+
 nav ul {
     list-style: none;
-    /*padding: 1em;
-    /*display: flex;
-    /*justify-content: space-evenly; /*space-between;*/
     padding: 0px;
     width: 100%;
     margin: 0px;
   }
+
 li{ 
     display: inline-block;
     padding: 1em 2em 2em 1em;
     float: right;
-    
 }
+
 li:first-child{
     float:left;
 }
@@ -28,38 +27,33 @@ nav {
   font-size: 2em;
   position: relative;
   z-index: 100;
-  
 }
 
-  nav a:link, nav a:visited {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-  }
-  nav a:hover, nav a:active  {
-    color: white;
-    text-decoration: underline;
-  }
-  nav a.active {
-    color: #F0F0F0;
-  }
+nav a:link, nav a:visited {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+nav a:hover, nav a:active  {
+  color: white;
+  text-decoration: underline;
+}
+nav a.active {
+  color: #F0F0F0;
+}
 
-  .header-img {
-    width: 100%;
-    height: 700px;
-    background: url(../img/sword_header.jpg);
-    background-size: cover;
-    /*position: absolute;*/
-  }
+.header-img {
+  width: 100%;
+  height: 700px;
+  background: url(../img/sword_header.jpg);
+  background-size: cover;
+}
 
-
-  .button-container{
-    padding-bottom: 100px;
-    padding-top: 0px;
-    margin: 0px;
-    
-  }
-
+.button-container{
+  padding-bottom: 100px;
+  padding-top: 0px;
+  margin: 0px;
+}
 
 .header_content{
   box-sizing: content-box;
@@ -75,10 +69,9 @@ nav {
   top: 55%;
   left: 60%;
   transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%); /**/
+  -ms-transform: translate(-50%, -50%); 
   font-family: 'Josefin Sans', sans-serif;
-  background-color: white; /* #555;
-  color: rgb(14, 69, 14); /*white; */
+  background-color: white; 
   padding: 2rem 6rem;
   border: none;
   cursor: pointer;
@@ -87,41 +80,33 @@ nav {
   font-size: 1.5em;
   font-weight: 700;
 }
+
 .title_descript{
-    position: absolute;
-    padding: 0px;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    margin: 0px;
-    top: 10rem;
-    left: 40%;
-    font-size: 2.75rem;  
-    width: 55%;
-    font-family: 'Oswald', sans-serif;
-    line-height: 3.5rem;
-    font-weight: 300;
-    color: white;
-    overflow: hidden;
-    /*background-color: rgba(0, 47, 255, 0.164); */
-
-  }
-
-  /*
-.container .btn:hover {
-  background-color: black;
+  position: absolute;
+  padding: 0px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: 0px;
+  top: 10rem;
+  left: 40%;
+  font-size: 2.75rem;  
+  width: 55%;
+  font-family: 'Oswald', sans-serif;
+  line-height: 3.5rem;
+  font-weight: 300;
+  color: white;
+  overflow: hidden;
 }
-*/
 
 body {
   margin: 0;
   padding: 0;
-  }
+}
 
 /* character grid */
 .grid-item{ 
   background: lightsalmon;
-  /*border: 2px solid black;*/
-  padding: 0;/*1.5rem;*/
+  padding: 0;
   margin: 0;
   height: 350px;
   max-height: 100em;
@@ -129,6 +114,7 @@ body {
   backface-visibility: hidden;
   border-radius: 65px;
 }
+
 .grid-container{
   padding: 1rem 1rem 1rem 0rem;
   padding-left: 1rem;
@@ -143,15 +129,11 @@ body {
   "nine ten eleven twelve";
 }
 
-
 .grid-container > p:nth-child(1) {
   grid-area: one;
 }
 .grid-container > p:nth-child(2) {
   grid-area: two;
-  /*background: url(../img/zelda1.jpg);
-    background-size: cover;
-    background-position-x: -200px;*/
 }
 .grid-container > p:nth-child(3) {
   grid-area: three;
@@ -184,33 +166,6 @@ body {
   grid-area: twelve;
 }
 
-/*
-
-.charBox {
-  transition: .5s ease;
-  opacity: 0;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
-  z-index: 20px;
-}
-
-
-.charBox:hover {
-  opacity: 1;
-}
-
-.charText {
-  background-color: #04AA6D;
-  color: white;
-  font-size: 16px;
-  padding: 16px 32px;
-  z-index: 5px;
-}
-*/
 .overlay {
   position: absolute;
   top: 0;
@@ -229,10 +184,6 @@ body {
   background-color: black;
   opacity: 0.8;
 }
-
-
-
-
 
 .characterBox {
   position: relative;
@@ -279,10 +230,6 @@ body {
   border-radius: 20px;
 }
 
-
-
-
-  
   /*-- Media Queries --*/
 @media screen and (min-width: 550px) {
   .title_descript{
