@@ -2,7 +2,7 @@
 
 html{
   width: 100%;
-  background-color: #d6c693;
+  background-color: #191201/*#d6c693;*/
 }
 
 nav ul {
@@ -47,6 +47,16 @@ nav a.active {
   height: 700px;
   background: url(../img/sword_header.jpg);
   background-size: cover;
+}
+
+h2{
+  font-family: 'Nabla', cursive;
+  font-size: 3rem;
+  text-align: center;
+}
+
+footer{
+  color: whitesmoke;
 }
 
 .button-container{
@@ -122,7 +132,7 @@ body {
   display: grid;
   grid-gap: 2rem;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   grid-template-areas:
   "one two three four"
   "five six seven eight"
@@ -197,6 +207,7 @@ body {
   height: auto;
   transition: .5s ease;
   backface-visibility: hidden;
+  /*box-shadow: 50px 50px 50px white;*/
 }
 
 .textBox {
