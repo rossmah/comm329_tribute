@@ -2,7 +2,7 @@
 
 html{
   width: 100%;
-  background-color: #191201/*#d6c693;*/
+  background-color: #191201;
 }
 
 nav ul {
@@ -71,6 +71,17 @@ footer{
   top: 90%;
   left: 50%;
   padding-bottom: 1rem;
+  overflow: hidden;
+  backface-visibility: hidden;
+}
+
+.fas {
+  font-size: 1.5rem;
+  color: white;
+  padding-left: 0.5rem;
+  padding-bottom: 2.5rem;
+  padding-top: 0;
+  vertical-align:text-top;
 }
 
 /* Style the button and place it in the middle of the container/image */
@@ -97,7 +108,7 @@ footer{
   padding-left: 1rem;
   padding-right: 1rem;
   margin: 0px;
-  top: 10rem;
+  top: 12rem;
   left: 40%;
   font-size: 2.75rem;  
   width: 55%;
@@ -106,6 +117,7 @@ footer{
   font-weight: 300;
   color: white;
   overflow: hidden;
+  backface-visibility: hidden;
 }
 
 body {
@@ -113,13 +125,17 @@ body {
   padding: 0;
 }
 
+.right-nav {
+  visibility: visible;
+}
+
 /* character grid */
 .grid-item{ 
   background: lightsalmon;
   padding: 0;
   margin: 0;
-  height: 350px;
-  max-height: 100em;
+  /*height: 350px;
+  max-height: 100em;*/
   background-size:cover;
   backface-visibility: hidden;
   border-radius: 65px;
@@ -132,11 +148,9 @@ body {
   display: grid;
   grid-gap: 2rem;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
   grid-template-areas:
   "one two three four"
-  "five six seven eight"
-  "nine ten eleven twelve";
+  "five six seven eight";
 }
 
 .grid-container > p:nth-child(1) {
@@ -162,18 +176,6 @@ body {
 }
 .grid-container > p:nth-child(8) {
   grid-area: eight;
-}
-.grid-container > p:nth-child(9) {
-  grid-area: nine;
-}
-.grid-container > p:nth-child(10) {
-  grid-area: ten;
-}
-.grid-container > p:nth-child(11) {
-  grid-area: eleven;
-}
-.grid-container > p:nth-child(12) {
-  grid-area: twelve;
 }
 
 .overlay {
@@ -242,32 +244,76 @@ body {
 }
 
   /*-- Media Queries --*/
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 200px) {
   .title_descript{
-    width: 5rem;
+    width: 50%;
+    font-size: 1.6rem;
+    line-height: 3rem;
+  }
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+  "one" 
+  "two"
+  "three" 
+  "four"
+  "five"
+  "six"
+  "seven"
+  "eight";
+  }
+  .right-nav {
+    visibility: hidden;
   }
 }
 @media screen and (min-width: 768px) {
   .title_descript{
-    width: 10rem;
+    width: 50%;
+    font-size: 1.9rem;
+    line-height: 3.2rem;
   }
-}
-@media screen and (min-width: 990px) {
-  .title_descript{width: 20rem;
-    font-size: 2rem;
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+  "one two"
+   "three four"
+   "five six"
+  "seven eight";
+  }
+  .right-nav {
+    visibility: visible;
   }
 }
 @media screen and (min-width: 1280px) {
   .title_descript{
-    width: 40%;
-    font-size: 1.8rem;
-    line-height: 2rem;
+    width: 50%;
+    font-size: 2.3rem;
+    line-height: 3.3rem;
+  }
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+  "one two three" 
+  "four five six"
+  "seven eight";
+  }
+  .right-nav {
+    visibility: visible;
   }
 }
 @media screen and (min-width: 1440px) {
   .title_descript{
-    width: 40%;
-    font-size: 2rem;
+    width: 50%;
+    font-size: 2.5rem;
     line-height: 3.5rem;
+  }
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+  "one two three four"
+  "five six seven eight";
+  }
+  .right-nav {
+    visibility: visible;
   }
 }
